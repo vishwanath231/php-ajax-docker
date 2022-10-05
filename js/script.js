@@ -4,6 +4,9 @@ const msgBox  = document.getElementById('msgBox');
 
 getRequest();
 
+
+// POST REQUEST
+
 form.addEventListener('submit', (e) => {
     e.preventDefault()
 
@@ -17,7 +20,7 @@ form.addEventListener('submit', (e) => {
 
     var xhttp = new XMLHttpRequest()
     
-    xhttp.open('POST', './controller/postController.php', true)
+    xhttp.open('POST', '../controller/postController.php', true)
     xhttp.setRequestHeader('Content-type', 'application/json')
     
     xhttp.onload = function () {
@@ -40,11 +43,13 @@ form.addEventListener('submit', (e) => {
 })
 
 
+// GET REQUEST
+
 function getRequest(){
 
     var xmlhttp = new XMLHttpRequest();
 
-    xmlhttp.open("GET", "./controller/getController.php", true);
+    xmlhttp.open("GET", "../controller/getController.php", true);
 
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -59,13 +64,13 @@ function getRequest(){
 
 
 
-
+// DELETE REQUEST
 
 function deleteRequest(val){
 
     var xmlhttp = new XMLHttpRequest();
 
-    xmlhttp.open("POST", "./controller/deleteContoller.php?id="+val, true);
+    xmlhttp.open("DELETE", "../controller/deleteController.php?id="+val, true);
     xmlhttp.setRequestHeader('Content-type','x-www-form-urlencoded')
 
     xmlhttp.onreadystatechange = function() {
@@ -84,6 +89,8 @@ function deleteRequest(val){
 }
 
 
+
+// CLOSE MSG BOX
 function closeMsgBox(){
     msgBox.classList.add('active')
 }
