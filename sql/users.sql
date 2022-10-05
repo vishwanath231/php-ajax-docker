@@ -39,7 +39,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `is_created`) VALUES
-(1, 'vishwanath', 'vishwanathvishwabai@gmail.com', '2022-10-05 05:58:42');
+(1, 'vishwanath', 'vishwanath@gmail.com', '2022-10-05 05:58:42');
 
 --
 -- Indexes for dumped tables
