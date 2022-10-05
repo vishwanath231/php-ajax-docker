@@ -3,7 +3,7 @@
 clone this project and run this command
 
 ```
-sudo docker-compose up 
+sudo docker-compose up --build
 
 ```
 you must install docker in your computer.
